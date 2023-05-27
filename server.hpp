@@ -94,54 +94,72 @@ public:
 				
 				case status::cli_handler_not_found:
 				{
+					logging::warnlog("no handler found for client command");
+					
 					if (auto result = current_session->write("unknow command"); st::is_not_success(result))
 					{
-						// TODO:
+						logging::errlog("write error");
+						return;
 					}
 					break;
 				}
 				
 				case status::loading_pump_not_active:
 				{
+					logging::warnlog("it is not possible to unload, the corresponding pump is inactive");
+					
 					if (auto result = current_session->write("loading pump not active"); st::is_not_success(result))
 					{
-						// TODO:
+						logging::errlog("write error");
+						return;
 					}
 					break;
 				}
 				
 				case status::unloading_pump_not_active:
 				{
+					logging::warnlog("unable to load, the corresponding pump is inactive");
+					
 					if (auto result = current_session->write("unloading pump not active"); st::is_not_success(result))
 					{
-						// TODO:
+						logging::errlog("write error");
+						return;
 					}
 					break;
 				}
 				
 				case status::storage_tank_non_working:
 				{
+					logging::warnlog("storage tank non working");
+					
 					if (auto result = current_session->write("oil tank not working"); st::is_not_success(result))
 					{
-						// TODO:
+						logging::errlog("write error");
+						return;
 					}
 					break;
 				}
 				
 				case status::low_level_of_oil_products:
 				{
+					logging::warnlog("critically low level of oil products");
+					
 					if (auto result = current_session->write("too low level of oil in the tank, it is impossible to download"); st::is_not_success(result))
 					{
-						// TODO:
+						logging::errlog("write error");
+						return;
 					}
 					break;
 				}
 				
 				case status::high_level_of_oil_products:
 				{
+					logging::warnlog("critically high level of oil products");
+					
 					if (auto result = current_session->write("too high level of oil in the tank, it is impossible to unload"); st::is_not_success(result))
 					{
-						// TODO:
+						logging::errlog("write error");
+						return;
 					}
 					break;
 				}
