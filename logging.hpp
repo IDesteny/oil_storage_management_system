@@ -1,6 +1,7 @@
 #ifndef __LOGGING_HPP__
 #define __LOGGING_HPP__
 
+#include <mutex>
 #include <iostream>
 #include <experimental/source_location>
 

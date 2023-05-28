@@ -3,7 +3,6 @@
 #define _IS_SERVER_
 
 #include <thread>
-#include <mutex>
 #include <random>
 
 #include "cli.hpp"

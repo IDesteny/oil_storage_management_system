@@ -14,7 +14,6 @@ enum class status
 	failed_initialization,
 	read_error,
 	write_error,
-	no_tanks,
 	failed_accepted,
 	disconnect,
 };

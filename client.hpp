@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <vector>
-#include <sstream>
 #include <memory>
 
 #include "dye.hpp"
@@ -215,7 +214,7 @@ public:
 			
 			if (user_command == "disconnect")
 			{
-				return status::success;
+				return status::disconnect;
 			}
 			
 			std::cout << "wait for the command...\n";
