@@ -185,7 +185,9 @@ private:
 					<< "get loading pump status\n"
 					<< "get unloading pump status\n"
 					<< "download <quantity of oil products (number)>\n"
-					<< "unload <quantity of oil products (number)>\n";
+					<< "unload <quantity of oil products (number)>\n"
+					<< "help\n"
+					<< "disconnect";
 					
 				return current_session->write(help_info.str());
 			}
